@@ -49,7 +49,7 @@ const ClimaProvider = ({children}) => {
         setCargando(true)
         try {
             const { ciudad, pais, units } = datos
-            const url1 = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${import.meta.env.VITE_API_KEY}`
+            const url1 = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${import.meta.env.VITE_API_KEY}`
             const respuesta1 = await fetch(url1)
             const resultado1 = await respuesta1.json()
             const { lat, lon } = resultado1[0]
