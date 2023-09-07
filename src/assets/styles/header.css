@@ -1,0 +1,36 @@
+.header{
+    padding: 0 15px;
+    background-color: var(--BlancoColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+.logo img{
+    width: 47.755px;
+    height: 45px;
+}
+.logo h1{
+    color: var(--SecundaryColor);
+}
+.logoA img{
+    width: 47px;
+    height: 47px;
+}
+@media only screen and (min-width: 768px){
+    .header{
+        padding: 0 52px;
+    }
+    .logo img{
+        width: 75px;
+        height: 70px;
+    }
+    .logoA img{
+        width: 50px;
+        height: 50px;
+    }
+}

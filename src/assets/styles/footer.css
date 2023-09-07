@@ -1,0 +1,7 @@
+footer{
+    text-align: center;
+    color: var(--SecundaryColor);
+}
+footer p a{
+    color: var(--SecundaryColor);
+}

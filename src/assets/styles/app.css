@@ -1,0 +1,15 @@
+.containerMain{
+    padding: 17px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+@media only screen and (min-width: 768px){
+    .containerMain{
+        padding: 60px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+        gap: 20px;
+    }
+    
+}
