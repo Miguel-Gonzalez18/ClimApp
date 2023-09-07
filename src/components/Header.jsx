@@ -11,7 +11,7 @@ function Header() {
                 <img src={logo} alt="logo de la palicación" />
                 <h1>ClimApp</h1>
             </div>
-            <a className='logoA' href="#" target="_blank" rel="noopener noreferrer">
+            <a className='logoA' href="https://github.com/Miguel-Gonzalez18/ClimApp" target="_blank" rel="noopener noreferrer">
                 <img src={logoGitHub} alt="Logo GitHub" />
             </a>
         </header>
