@@ -4,27 +4,28 @@ import '../assets/styles/formulario.css'
 import weatherIcon from '../assets/img/weatherIcon.png'
 //hooks
 import useClima from '../hooks/useClima'
-import { useState } from 'react'
 
 function Formulario() {
-    const [alerta, setAlerta] = useState('')
-    const {busqueda, datosBusqueda, consultarClima} = useClima()
+    const {busqueda, datosBusqueda, consultarClima, alerta, setAlerta} = useClima()
     const {ciudad, pais} = busqueda
 
     const handleSubmit = e => {
         e.preventDefault()
 
         if(Object.values(busqueda).includes('')){
-            setAlerta("Todos los datos son obligatorios")
+            setAlerta({...alerta, ['message']: "Todos los datos son obligatorios", ['type']: 'error'})
             return
         }
-        setAlerta('')
+        setAlerta({
+            'message': '',
+            'type': ''
+        })
         consultarClima(busqueda)
     }
 
     return (
         <form action="#" onSubmit={handleSubmit}>
-            {alerta && <p className='alerta'>{alerta}</p>}
+            {!Object.values(alerta).includes('') && <p className={alerta.type}>{alerta.message}</p>}
             <div className="formulario">
                 <img src={weatherIcon} alt="Logo Loweather" />
                 <div className="campo">

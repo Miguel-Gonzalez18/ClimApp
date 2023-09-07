@@ -13,6 +13,20 @@
   --GrisClaro: #ABB2B9;
 
 }
+.error{
+  background-color: #FADBD8;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 5px solid #B03A2E;
+  color: #641E16;
+}
+.warning{
+  background-color: #F9E79F;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 5px solid #D68910;
+  color: #784212;
+}
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.

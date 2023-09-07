@@ -4,6 +4,10 @@ const ClimaContext = createContext()
 
 const ClimaProvider = ({children}) => {
     const [cargando, setCargando] = useState(false)
+    const [alerta, setAlerta] = useState({
+        'message': '',
+        'type': ''
+    })
 
     const [busqueda, setBusqueda] = useState({
         ciudad: '',
@@ -47,6 +51,10 @@ const ClimaProvider = ({children}) => {
 
     const consultarClima = async datos =>{
         setCargando(true)
+        setAlerta({
+            'message': '',
+            'type': ''
+        })
         try {
             const { ciudad, pais, units } = datos
             const url1 = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${import.meta.env.VITE_API_KEY}`
@@ -61,11 +69,12 @@ const ClimaProvider = ({children}) => {
             setCargando(false)
         } catch (error) {
             console.log(error)
+            setAlerta({...alerta, ['message']: "🤔Al parecer no hubo resultados. Asegúrate de que la ciudad y el país coincidan, además que esté bien escrito. Vuelve a intentarlo", ['type']: 'warning'})
         }
     }
 
     return(
-        <ClimaContext.Provider value={{busqueda, datosBusqueda, consultarClima, resultadoClima, formatearFecha, msToKmh, setBusqueda, cargando}}>
+        <ClimaContext.Provider value={{busqueda, datosBusqueda, consultarClima, resultadoClima, formatearFecha, msToKmh, setBusqueda, cargando, alerta, setAlerta}}>
             {children}
         </ClimaContext.Provider>
     )

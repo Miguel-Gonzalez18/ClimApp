@@ -35,13 +35,6 @@
     color: var(--BlancoColor);
     text-transform: uppercase;
 }
-.alerta{
-    background-color: #FADBD8;
-    padding: 1rem;
-    border-radius: 10px;
-    border-left: 5px solid #B03A2E;
-    color: #641E16;
-}
 @media only screen and (min-width: 768px) {
     .formulario{
         padding: 75px 25px;
