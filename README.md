@@ -1,8 +1,19 @@
-# React + Vite
+# ClimApp
+ClimApp is a web application that with the use of an API shows results on the weather according to the city and the country.
+Learn more about the API [https://openweathermap.org/api/one-call-3](https://openweathermap.org/api/one-call-3)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Getting Started
 
-Currently, two official plugins are available:
+First, run the development server:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+# next
+npm run dev
+# or
+yarn dev
+```
+Open [http://127.0.0.1:5173/](http://127.0.0.1:5173/) with your browser to see the result.
+
+## Figma
+Check the styles, colors and fonts of the design in Figma here: [https://www.figma.com/community/file/1280510886132444799/ClimApp](https://www.figma.com/community/file/1280510886132444799/ClimApp)
